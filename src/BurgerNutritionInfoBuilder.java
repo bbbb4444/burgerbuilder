@@ -30,19 +30,7 @@ public class BurgerNutritionInfoBuilder implements Builder {
         return this;
     }
 
-    @Override
-    public BurgerNutritionInfoBuilder addOnion() {
-        this.onion = true;
-        return this;
-    }
-
-    @Override
-    public BurgerNutritionInfoBuilder addKetchup() {
-        this.ketchup = true;
-        return this;
-    }
-
     public BurgerNutritionInfo build() {
-        return new BurgerNutritionInfo(bun, patty, lettuce, tomato, onion, ketchup);
+        return new BurgerNutritionInfo(bun, patty, lettuce, tomato);
     }
 }

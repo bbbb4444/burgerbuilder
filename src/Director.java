@@ -1,17 +1,21 @@
 public class Director {
 
-    public void buildLettuceBurger(Builder builder) {
+    public void buildBurgerWithLettuce(Builder builder) {
         builder.addBun("White")
                 .addPatty("Beef")
                 .addLettuce();
     }
 
-    public void buildVeggieBurger(Builder builder) {
+    public void buildBurgerWithTomato(Builder builder) {
         builder.addBun("White")
-                .addPatty("Veggie")
+                .addPatty("Beef")
+                .addTomato();
+    }
+
+    public void buildBurgerWithLettuceAndTomato(Builder builder) {
+        builder.addBun("White")
+                .addPatty("Beef")
                 .addLettuce()
-                .addTomato()
-                .addOnion()
-                .addKetchup();
+                .addTomato();
     }
 }

@@ -3,6 +3,5 @@ public interface Builder {
     Builder addPatty(String patty);
     Builder addLettuce();
     Builder addTomato();
-    Builder addOnion();
-    Builder addKetchup();
 }
+
