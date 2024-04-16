@@ -1,30 +1,27 @@
 public class BurgerBuilder implements Builder {
-    private String bun;
-    private String patty;
-    private boolean lettuce;
-    private boolean tomato;
+    Burger burger = new Burger();
 
     public BurgerBuilder addBun(String bun) {
-        this.bun = bun;
+        burger.addBun(bun);
         return this;
     }
 
     public BurgerBuilder addPatty(String patty) {
-        this.patty = patty;
+        burger.addPatty(patty);
         return this;
     }
 
     public BurgerBuilder addLettuce() {
-        this.lettuce = true;
+        burger.addLettuce();
         return this;
     }
 
     public BurgerBuilder addTomato() {
-        this.tomato = true;
+        burger.addTomato();
         return this;
     }
 
     public Burger build() {
-        return new Burger(bun, patty, lettuce, tomato);
+        return burger;
     }
 }

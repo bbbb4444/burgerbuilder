@@ -3,19 +3,30 @@ public class Burger {
     private String patty;
     private boolean lettuce;
     private boolean tomato;
+    private String result = "";
 
-    public Burger(String bun, String patty, boolean lettuce, boolean tomato) {
+    public void addBun(String bun) {
         this.bun = bun;
+        result += bun + " (Bun)";
+    }
+
+    public void addPatty(String patty) {
         this.patty = patty;
-        this.lettuce = lettuce;
-        this.tomato = tomato;
+        result += ", " + patty + " (Patty)";
+    }
+
+    public void addLettuce() {
+        this.lettuce = true;
+        result += ", Lettuce";
+    }
+
+    public void addTomato() {
+        this.tomato = true;
+        result += ", Tomato";
     }
 
     public void print() {
-        if (bun != null) System.out.println("Bun: " + bun);
-        if (patty != null) System.out.println("Patty: " + patty);
-        if (lettuce) System.out.println("Lettuce");
-        if (tomato) System.out.println("Tomato");
+        System.out.println(result);
 
         System.out.println("\nEnjoy!");
     }
