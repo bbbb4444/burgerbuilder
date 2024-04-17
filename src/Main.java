@@ -9,5 +9,9 @@ public class Main {
 
         burgerWithLettuceAndTomato.print();
 
+        HotdogBuilder hb = new HotdogBuilder();
+        director.buildHotdogWithTomato(hb);
+        Hotdog hd = hb.build();
+        hd.print();
     }
 }

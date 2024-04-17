@@ -3,5 +3,8 @@ public interface Builder {
     Builder addPatty(String patty);
     Builder addLettuce();
     Builder addTomato();
+    Builder addOnion();
+    Builder addCondiment(String condiment);
+    Builder addPickles();
 }
 

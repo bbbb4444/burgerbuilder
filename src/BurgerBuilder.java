@@ -3,6 +3,9 @@ public class BurgerBuilder implements Builder {
     private String patty;
     private boolean lettuce;
     private boolean tomato;
+    private boolean onion;
+    private String condiment;
+    private boolean pickles;
     private String result = "";
 
     public BurgerBuilder addBun(String bun) {
@@ -25,11 +28,29 @@ public class BurgerBuilder implements Builder {
 
     public BurgerBuilder addTomato() {
         this.tomato = true;
-        result += ", Tomato";
+        result += ", Sliced Tomato";
+        return this;
+    }
+
+    public BurgerBuilder addOnion() {
+        this.tomato = true;
+        result += ", Onion";
+        return this;
+    }
+
+    public BurgerBuilder addCondiment(String condiment) {
+        this.condiment = condiment;
+        result += ", " + condiment;
+        return this;
+    }
+
+    public BurgerBuilder addPickles() {
+        this.pickles = true;
+        result += ", Pickles";
         return this;
     }
 
     public Burger build() {
-        return new Burger(bun, patty, lettuce, tomato, result);
+        return new Burger(bun, patty, lettuce, tomato, onion, condiment, pickles, result);
     }
 }

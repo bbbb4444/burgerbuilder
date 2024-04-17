@@ -3,6 +3,9 @@ public class HotdogBuilder implements Builder {
     private String patty;
     private boolean lettuce;
     private boolean tomato;
+    private boolean onion;
+    private String condiment;
+    private boolean pickles;
     private String result = "";
 
     public HotdogBuilder addBun(String bun) {
@@ -13,7 +16,7 @@ public class HotdogBuilder implements Builder {
 
     public HotdogBuilder addPatty(String patty) {
         this.patty = patty;
-        result += ", " + "Patty: " + patty;
+        result += ", " + "Wiener: " + patty;
         return this;
     }
 
@@ -25,11 +28,29 @@ public class HotdogBuilder implements Builder {
 
     public HotdogBuilder addTomato() {
         this.tomato = true;
-        result += ", Tomato";
+        result += ", Diced Tomato";
+        return this;
+    }
+
+    public HotdogBuilder addOnion() {
+        this.tomato = true;
+        result += ", Diced Onion";
+        return this;
+    }
+
+    public HotdogBuilder addCondiment(String condiment) {
+        this.condiment = condiment;
+        result += ", " + condiment;
+        return this;
+    }
+
+    public HotdogBuilder addPickles() {
+        this.pickles = true;
+        result += ", Pickles";
         return this;
     }
 
     public Hotdog build() {
-        return new Hotdog(bun, patty, lettuce, tomato, result);
+        return new Hotdog(bun, patty, lettuce, tomato, onion, condiment, pickles, result);
     }
 }
