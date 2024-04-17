@@ -1,35 +1,35 @@
-public class BurgerBuilder implements Builder {
+public class HotdogBuilder implements Builder {
     private String bun;
     private String patty;
     private boolean lettuce;
     private boolean tomato;
     private String result = "";
 
-    public BurgerBuilder addBun(String bun) {
+    public HotdogBuilder addBun(String bun) {
         this.bun = bun;
         result += "Bun: " + bun;
         return this;
     }
 
-    public BurgerBuilder addPatty(String patty) {
+    public HotdogBuilder addPatty(String patty) {
         this.patty = patty;
         result += ", " + "Patty: " + patty;
         return this;
     }
 
-    public BurgerBuilder addLettuce() {
+    public HotdogBuilder addLettuce() {
         this.lettuce = true;
         result += ", Lettuce";
         return this;
     }
 
-    public BurgerBuilder addTomato() {
+    public HotdogBuilder addTomato() {
         this.tomato = true;
         result += ", Tomato";
         return this;
     }
 
-    public Burger build() {
-        return new Burger(bun, patty, lettuce, tomato, result);
+    public Hotdog build() {
+        return new Hotdog(bun, patty, lettuce, tomato, result);
     }
 }

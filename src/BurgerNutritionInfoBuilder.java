@@ -3,8 +3,6 @@ public class BurgerNutritionInfoBuilder implements Builder {
     private String patty;
     private boolean lettuce;
     private boolean tomato;
-    private boolean onion;
-    private boolean ketchup;
 
     @Override
     public BurgerNutritionInfoBuilder addBun(String bun) {

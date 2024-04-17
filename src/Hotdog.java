@@ -1,11 +1,11 @@
-public class Burger {
+public class Hotdog {
     private String bun;
     private String patty;
     private boolean lettuce;
     private boolean tomato;
     private String result;
 
-    public Burger(String bun, String patty, boolean lettuce, boolean tomato, String result) {
+    public Hotdog(String bun, String patty, boolean lettuce, boolean tomato, String result) {
         this.bun = bun;
         this.patty = patty;
         this.lettuce = lettuce;
@@ -14,7 +14,7 @@ public class Burger {
     }
 
     public void print() {
-        System.out.println("Burger: ");
+        System.out.println("Hotdog: ");
         System.out.println(result);
 
         System.out.println("Enjoy!\n");
