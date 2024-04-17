@@ -11,7 +11,7 @@ public class Main {
 
 
         HotdogBuilder HotdogBuilder = new HotdogBuilder();
-        director.buildHotdogWithTomato(HotdogBuilder);
+        director.buildSpicyBratwurstHotdogWithTomato(HotdogBuilder);
 
         Hotdog hotdogWithKetchup = HotdogBuilder.build();
         hotdogWithKetchup.print();

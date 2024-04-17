@@ -7,7 +7,7 @@ public class Director {
                 .addTomato();
     }
 
-    public void buildHotdogWithTomato(Builder builder) {
+    public void buildSpicyBratwurstHotdogWithTomato(Builder builder) {
         builder.addBun("White")
                 .addPatty("Spicy Bratwurst")
                 .addCondiment("Ketchup");
